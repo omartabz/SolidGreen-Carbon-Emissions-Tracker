@@ -1,0 +1,472 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #000307;
+    /* Choose a clear and readable font */
+    font-size: 16px;
+    /* Base font size for body text */
+    line-height: 1.6;
+    /* Adjust line height for better readability */
+}
+
+.head {
+    align-items: center;
+}
+
+.hero-content {
+    text-align: center;
+    /* max-width: 50%; */
+    align-content: center;
+    border: 2px solid white; /* Adjust border color and width as needed */
+    padding: 20px; /* Adjust padding as needed */
+    background-color: white; /* Optional: Add background color */
+    color: black;
+    font-size: larger;
+}
+
+header ul {
+    text-align: center;
+}
+
+header ul li a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color:green;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+header {
+    background-color: #010a13;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header ul li {
+    margin: 0 15px;
+}
+
+header ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header ul li a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: black;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #01060c;
+    margin-top: 20px;
+    border-bottom: 2px solid #00070e;
+    padding-bottom: 10px;
+}
+
+p {
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+.team-member {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.team-member img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    border: 3px solid #000307;
+}
+
+.team-member-info {
+    max-width: 600px;
+}
+
+.team-member-info h3 {
+    margin: 0;
+    color: #01060c;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #010911;
+    color: #fff;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+
+}
+
+.logo {
+    position:absolute;
+    top: 0;
+    left: 0;
+    background: size 1000px;
+}
+
+.logo-content {
+    flex: 1;
+}
+
+.hamburger-icon {
+    display: block;
+    /* Show hamburger icon */
+}
+
+.nav-features {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Show hamburger icon and hide nav links on small screens */
+@media (max-width: 768px) {
+    .nav-features {
+        display: none;
+        /* Hide nav links */
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        background-color: #f8f8f8;
+        padding: 10px 0;
+        position: absolute;
+        top: 60px;
+        /* Adjust to your header height */
+        right: 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+}
+
+h1 {
+    /* color: #2c6e49; */
+    color: #333;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    text-align: center;
+}
+
+form,
+.feedback {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.feedback {
+    margin-top: 2em;
+    margin-bottom: 3em;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #2c6e49;
+    font-weight: bold;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #2c6e49;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10%;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #255f44;
+}
+
+.feedback-entry {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.comment-section {
+    margin-top: 20px;
+}
+
+.comment,
+.reply-comment {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.like-button {
+    background-color: #2c6e49;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* General Header Styling */
+.header {
+    background-color: black;
+    padding: 5px 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    flex: 0 0 auto;
+    margin-right: 20px;
+    /* Space between the logo and content */
+}
+
+.logo img {
+    max-width: 100px;
+    /* Adjust the size of the logo as needed */
+    height: auto;
+}
+
+/* .logo img {
+max-height: 50px;
+} */
+
+.nav-features {
+    display: flex;
+    gap: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-features div a {
+    text-decoration: none;
+    /* color: #333; */
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.nav-features div a:hover {
+    color: #ff6600;
+}
+
+
+.hamburger-icon {
+    display: none;
+    /* Initially hidden on larger screens */
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Hide nav links by default on small screens */
+.nav-features {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Show hamburger icon and hide nav links on small screens */
+@media (max-width: 768px) {
+    .nav-features {
+        display: none;
+        /* Hide nav links */
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        background-color: #f8f8f8;
+        padding: 10px 0;
+        position: absolute;
+        top: 60px;
+        /* Adjust to your header height */
+        right: 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo-content h2 {
+        margin: 0;
+        font-size: 1em;
+        /* Adjust font size as needed */
+        color: #fff;
+    }
+
+    .logo-content p {
+        font-size: 0.5em;
+        /* Adjust font size as needed */
+        color: #fff;
+    }
+
+    .hamburger-icon {
+        display: block;
+        /* Show hamburger icon */
+    }
+
+    /* Show the nav links when active */
+    .nav-features.show {
+        display: flex;
+    }
+
+    .hamburger-icon.hide {
+        display: none;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 0;
+    width: 100%;
+    /* margin-top: 5em; */
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-contact-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 20px;
+}
+
+.contact-info,
+.footer-social {
+    width: 45%;
+}
+
+.contact-info h2,
+.footer-social h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
+}
+
+.contact-info p,
+.footer-social p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.footer-social ul li {
+    display: inline-block;
+}
+
+.footer-social ul li img {
+    width: 24px;
+    height: 24px;
+    filter: invert(1);
+    /* To make icons white */
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 20px;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* .logo-content{
+color: white;
+position: relative;
+right: 100px;
+} */
+.logo-content {
+    flex: 1;
+}
+
+.logo-content h2 {
+    margin: 0;
+    font-size: 1.6em;
+    /* Adjust font size as needed */
+    color: #fff;
+}
+
+.logo-content p {
+    font-size: 1em;
+    /* Adjust font size as needed */
+    color: #fff;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+
+}

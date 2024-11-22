@@ -1,0 +1,18 @@
+###
+POST http://localhost:4000/api/predict
+Content-Type: application/json
+
+{
+    "Make": "ACURA",
+    "Model": "ILX",
+    "Vehicle": "COMPACT",
+    "Engine Size(L)": 2,
+    "Cylinders": 5,
+    "Transmission": "A",
+    "Fuel Type":"Z", 
+    "Fuel Consumption City (L/100 km)": 6.2,
+    "Fuel Consumption Hwy (L/100 km)": 9,
+    "Fuel Consumption Comb (L/100 km)": 8.5,
+    "Fuel Consumption Comb (mpg)": 29,
+    "CO2 Emissions(g/km)": 196
+}
