@@ -1,52 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vehicle Emissions Calculator</title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="emissions.css">
-    <style>
-        /* CSS to position the image in the top-left corner */
-        #top-left-image {
-            position: absolute;
-            top: 10px;  /* Adjust the value to move it down or up */
-            left: 10px; /* Adjust the value to move it left or right */
-            width: 100px; /* Adjust the size of the image */
-            height: auto; /* Maintain the aspect ratio of the image */
-            box-shadow: 100px rgba(0, 0, 0, 0.2); /* Soft shadow for contrast */
-        }
-    </style>
 </head>
-<body>
-    <!-- Image in top-left corner -->
-    <img src="download.png" alt="Logo" id="top-left-image">
-</head>
+
+
+
 <body>
     <h1>Vehicle Emissions Calculator</h1>
     <div class="border">
         <form id="vehicleForm">
             <label for="Make">Make</label>
             <input type="text" placeholder="AUDI,TOYOTA,NISSAN,VOLKSWAGEN" id="Make" name="Make"><br><br>
-            
+
             <label for="Model">Model</label>
-            <input type="text" placeholder="A4,A5,COROLLA,370Z,JUKE,TIGUAN" id="Model" name="Model"><br><br>
-            
+            <input type="text" placeholder="A4,A8,COROLLA,370Z,JUKE,TIGUAN" id="Model" name="Model"><br><br>
+
             <!-- <label for="CO2 Emissions(g/km)">CO2 Emissions(g/km)</label>
             <input type="number" placeholder="0-1000" id="CO2 Emissions(g/km)" name="CO2 Emissions(g/km)"><br><br>
              -->
-            <label for="Fuel Consumption Comb (mpg)">Fuel Consumption Comb (mpg)</label>
-            <input type="number" placeholder="0-100" id="Fuel Consumption Comb (mpg)" name="Fuel Consumption Comb (mpg)"><br><br>
-            
-            <label for="Fuel Consumption Comb (L/100 km)">Fuel Consumption Comb (L/100 km)</label>
-            <input type="number" placeholder="0-100" id="Fuel Consumption Comb (L/100 km)" name="Fuel Consumption Comb (L/100 km)"><br><br>
-            
+
             <label for="Fuel Consumption Hwy (L/100 km)">Fuel Consumption Hwy (L/100 km)</label>
-            <input type="number" placeholder="0-100" id="Fuel Consumption Hwy (L/100 km)" name="Fuel Consumption Hwy (L/100 km)"><br><br>
-            
+            <input type="number" placeholder="0-100" id="Fuel Consumption Hwy (L/100 km)"
+                name="Fuel Consumption Hwy (L/100 km)"><br><br>
+
             <label for="Fuel Consumption City (L/100 km)">Fuel Consumption City (L/100 km)</label>
-            <input type="number" placeholder="0-100" id="Fuel Consumption City (L/100 km)" name="Fuel Consumption City (L/100 km)"><br><br>
-            
+            <input type="number" placeholder="0-100" id="Fuel Consumption City (L/100 km)"
+                name="Fuel Consumption City (L/100 km)"><br><br>
+
+            <label for="Fuel Consumption Comb (mpg)">Fuel Consumption Comb (mpg)</label>
+            <input type="number" placeholder="0-100" id="Fuel Consumption Comb (mpg)"
+                name="Fuel Consumption Comb (mpg)"><br><br>
+
+            <label for="Fuel Consumption Comb (L/100 km)">Fuel Consumption Comb (L/100 km)</label>
+            <input type="number" placeholder="0-100" id="Fuel Consumption Comb (L/100 km)"
+                name="Fuel Consumption Comb (L/100 km)"><br><br>
+
             <label for="Fuel Type">Fuel Type</label>
             <select id="Fuel Type" name="Fuel Type">
                 <option value="X">Regular Gas</option>
@@ -55,7 +49,7 @@
                 <option value="E">Ethanol</option>
                 <option value="N">Natural Gas</option>
             </select><br><br>
-            
+
             <label for="transmission">Transmission</label>
             <select id="transmission" name="transmission">
                 <option value="A">Automatic</option>
@@ -64,13 +58,13 @@
                 <option value="AV">Continuously Variable</option>
                 <option value="M">Manual</option>
             </select><br><br>
-            
+
             <label for="Cylinders">Cylinders</label>
             <input type="number" placeholder="1-12" id="Cylinders" name="Cylinders"><br><br>
-            
+
             <label for="Engine Size (L)">Engine Size</label>
             <input type="number" placeholder="1.0 -7.0" id="Engine Size (L)" name="Engine Size (L)"><br><br>
-            
+
             <label for="vehicle class">Vehicle Class</label>
             <select id="vehicle class" name="vehicle class">
                 <option value="COMPACT">Compact</option>
@@ -87,7 +81,7 @@
     </div>
 
     <button onclick="predict()">Check Emissions</button>
-    
+
     <div id="result"></div>
 
     <script>
@@ -120,14 +114,16 @@
 
             axios.post('http://localhost:4000/api/predict', data)
                 .then(response => {
-                    const emission = parseFloat(response.data["CO2 Emissions(g/km)"]).toFixed(2);
+                    const emission = parseFloat(response.data["CO2 Emissions(g/km)"]).toFixed(2) + " (g/km)";
                     document.getElementById('result').innerText = 'Prediction: ' + emission;
                 })
                 .catch(error => {
                     console.error('There was an error!', error);
                     document.getElementById('result').innerText = 'Error in prediction';
-                });
+                }
+                );
         }
     </script>
 </body>
+
 </html>
